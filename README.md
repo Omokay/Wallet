@@ -17,7 +17,7 @@
    2. Clone this repository [https://github.com/Omokay/Wallet.git](https://github.com/Omokay/Wallet.git)
    3. Go to the project directory `cd Wallet`
    4. Add a .env file to the root directory
-   5. Provide values for environment variables `MYSQL_DATABASE` for the database name, `MYSQL_PASSWORD` for the database password and `JWT_SECRET` for the Jwt Secret Key.
+   5. Provide values for environment variables `MYSQL_DATABASE` for the database name, `MYSQL_PASSWORD` for the database password and `JWT_SECRET` for the Jwt Secret Key, etc.
    6. To startup the application run `docker compose up`
 ## Working API Routes
   | Action        | Request Type           | Endpoint  |
@@ -32,6 +32,7 @@
 ## Links
 ## Api Collection
    Postman: [Link](https://api.postman.com/collections/7398319-2f685a8d-0897-4eff-a439-a9bfd0342b89?access_key=PMAT-01GPJKRN3W4CHQFZVDDY82YBCH)
+   
 ## Licensing 
    Demo Credit is under the MIT License
 ## Author
