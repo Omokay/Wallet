@@ -14,8 +14,10 @@ COPY . .
 # Port Mappings
 EXPOSE 2023
 
-# Install nodemon
-RUN npm install -g nodemon
+# bcrypt compiled on OSX will not quite work on Linux, so
+# Install bcrypt
+RUN npm install bcrypt
+
 
 # CMD commands
 CMD [ "npm", "start" ]
