@@ -1,0 +1,49 @@
+{
+  "name": "wallet",
+  "version": "1.0.0",
+  "description": "Demo Credit is a mobile lending app that requires wallet functionality. This is needed as borrowers need a wallet to receive the loans they have been granted and also send the money for repayments.",
+  "main": "dist/src/server.js",
+  "scripts": {
+    "start": "tsc && DEBUG=knex:tx node dist/src/server.js",
+    "lint": "eslint . --ext .ts",
+    "test": "NODE_ENV=test jest --detectOpenHandles",
+    "test-watch": "NODE_ENV=test jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omokay/Wallet.git"
+  },
+  "author": "Omoke Chuku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omokay/Wallet/issues"
+  },
+  "homepage": "https://github.com/Omokay/Wallet#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/jest": "^29.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.31.0",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@jest/globals": "^29.3.1",
+    "bcrypt": "^5.1.0",
+    "chai": "^4.3.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.3.0",
+    "luhn-generator": "^0.6.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
+  }
+}

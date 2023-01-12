@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  demo_credit_app:
+    container_name: demo_credit_app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=development
+      - MYSQL_HOST=demo_credit_db
+    ports:
+      - "2023:2023"
+    depends_on:
+      - demo_credit_db
+    networks:
+      - lender_net
+    restart: always
+
+  demo_credit_db:
+    container_name: demo_credit_db
+    image: mysql:latest
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DB_NAME}
+#    ports:
+#      - "${MYSQL_PORT_LOCAL}:${MYSQL_PORT_DOCKER}"
+#      - "${MYSQL_PORT_LOCAL1}:${MYSQL_PORT_DOCKER1}"
+    volumes:
+      - mysql-data:/var/lib/mysql
+       - ./:/usr/src/server
+       - /usr/src/server/node_modules
+    networks:
+      - lender_net
+    restart: always
+
+volumes:
+  mysql-data:
+    driver: local
+
+networks:
+  lender_net:
+    driver: bridge
